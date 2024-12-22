@@ -19,34 +19,34 @@ class _LibraryProductsScreenState extends State<LibraryProductsScreen> {
   //22222222
   final List<Map<String, dynamic>> items = [
     {
-      'name': 'HandBag Lv',
+      'name': 'Obal',
       'price': 255,
-      'image': 'images/handbag.jpg',
+      'image': 'images/library1.jpg',
     },
     {
-      'name': 'Shoes Nike',
+      'name': 'Amanos',
       'price': 180,
-      'image': 'images/shoes.jpg',
+      'image': 'images/library2.jpg',
     },
     {
-      'name': 'Watch Rolex',
+      'name': 'Koekol',
       'price': 550,
-      'image': 'images/watch.jpg',
+      'image': 'images/library3.jpg',
     },
     {
-      'name': 'Sunglasses RayBan',
+      'name': 'Sokatra',
       'price': 120,
-      'image': 'images/sunglasses.jpg',
+      'image': 'images/library4.jpg',
     },
     {
-      'name': 'Jacket Zara',
+      'name': 'Serrosh',
       'price': 300,
-      'image': 'images/jacket.jpg',
+      'image': 'images/library5.jpg',
     },
     {
-      'name': 'Scarf Gucci',
+      'name': 'Ekadoly',
       'price': 95,
-      'image': 'images/scarf.jpg',
+      'image': 'images/library6.jpg',
     },
   ];
   //222222222222
@@ -81,7 +81,7 @@ class _LibraryProductsScreenState extends State<LibraryProductsScreen> {
       case 4:
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => FavouritePage()),
+          MaterialPageRoute(builder: (context) => FavouritePage(favoriteItems: [],)),
         );
         break;
       case 5:
@@ -96,7 +96,7 @@ class _LibraryProductsScreenState extends State<LibraryProductsScreen> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.grey,
-        title:const Text('Clothes Products',style: TextStyle(
+        title:const Text('Library Products',style: TextStyle(
           fontSize: 30,
           color: Color(0xff8B0000),
 
@@ -109,9 +109,8 @@ class _LibraryProductsScreenState extends State<LibraryProductsScreen> {
           items: const [
 
             BottomNavigationBarItem(icon:Icon(Icons.home_filled),label: "Home",),
-            BottomNavigationBarItem(icon:Icon(Icons.shopping_bag_outlined),label: "buy",),
-            BottomNavigationBarItem(icon:  Icon(Icons.person_2_outlined),label: "Profile",)
-            ,BottomNavigationBarItem(icon:  Icon(Icons.add_shopping_cart),label: "Cart",)
+          BottomNavigationBarItem(icon:  Icon(Icons.person_2_outlined),label: "Profile",),
+            BottomNavigationBarItem(icon:  Icon(Icons.add_shopping_cart),label: "Cart",)
           ,BottomNavigationBarItem(icon: Icon(Icons.settings), label: "Setting",),
             BottomNavigationBarItem(icon:  Icon(Icons.favorite),label: "Favourite",)
           ]),

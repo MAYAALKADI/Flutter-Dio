@@ -20,24 +20,24 @@ class _ElectronicProductsScreenState extends State<ElectronicProductsScreen> {
   //22222222
   final List<Map<String, dynamic>> items = [
     {
-      'name': 'HandBag Lv',
+      'name': 'Labtob',
       'price': 255,
-      'image': 'images/handbag.jpg',
+      'image': 'images/elec1.jpg',
     },
     {
-      'name': 'Shoes Nike',
+      'name': 'HeadPhones',
       'price': 180,
-      'image': 'images/shoes.jpg',
+      'image': 'images/elec2.jpg',
     },
     {
-      'name': 'Watch Rolex',
+      'name': 'MobileCover',
       'price': 550,
-      'image': 'images/watch.jpg',
+      'image': 'images/elec3.jpg',
     },
     {
-      'name': 'Sunglasses RayBan',
+      'name': 'Bluetooth',
       'price': 120,
-      'image': 'images/sunglasses.jpg',
+      'image': 'images/elec4.jpg',
     },
     {
       'name': 'Jacket Zara',
@@ -82,7 +82,7 @@ class _ElectronicProductsScreenState extends State<ElectronicProductsScreen> {
       case 4:
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => FavouritePage()),
+          MaterialPageRoute(builder: (context) => FavouritePage(favoriteItems: [],)),
         );
         break;
       case 5:
@@ -98,7 +98,7 @@ class _ElectronicProductsScreenState extends State<ElectronicProductsScreen> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.grey,
-        title:const Text('Clothes Products',style: TextStyle(
+        title:const Text('Electronic Products',style: TextStyle(
           fontSize: 30,
           color: Color(0xff8B0000),
 

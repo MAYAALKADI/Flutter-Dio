@@ -20,24 +20,24 @@ class _FoodProductsScreenState extends State<FoodProductsScreen> {
   //22222222
   final List<Map<String, dynamic>> items = [
     {
-      'name': 'HandBag Lv',
+      'name': 'Labtob',
       'price': 255,
-      'image': 'images/handbag.jpg',
+      'image': 'images/elec1.jpg',
     },
     {
-      'name': 'Shoes Nike',
+      'name': 'HeadPhones',
       'price': 180,
-      'image': 'images/shoes.jpg',
+      'image': 'images/elec2.jpg',
     },
     {
-      'name': 'Watch Rolex',
+      'name': 'MobileCover',
       'price': 550,
-      'image': 'images/watch.jpg',
+      'image': 'images/elec3.jpg',
     },
     {
-      'name': 'Sunglasses RayBan',
+      'name': 'Bluetooth HeadPhones',
       'price': 120,
-      'image': 'images/sunglasses.jpg',
+      'image': 'images/elec4.jpg',
     },
     {
       'name': 'Jacket Zara',
@@ -83,7 +83,7 @@ class _FoodProductsScreenState extends State<FoodProductsScreen> {
       case 4:
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => FavouritePage()),
+          MaterialPageRoute(builder: (context) => FavouritePage(favoriteItems: [],)),
         );
         break;
       case 5:
@@ -99,7 +99,7 @@ class _FoodProductsScreenState extends State<FoodProductsScreen> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.grey,
-        title:const Text('Clothes Products',style: TextStyle(
+        title:const Text('Food Products',style: TextStyle(
           fontSize: 30,
           color: Color(0xff8B0000),
 
@@ -112,7 +112,6 @@ class _FoodProductsScreenState extends State<FoodProductsScreen> {
           items: const [
 
             BottomNavigationBarItem(icon:Icon(Icons.home_filled),label: "Home",),
-            BottomNavigationBarItem(icon:Icon(Icons.shopping_bag_outlined),label: "buy",),
             BottomNavigationBarItem(icon:  Icon(Icons.person_2_outlined),label: "Profile",)
             ,BottomNavigationBarItem(icon:  Icon(Icons.add_shopping_cart),label: "Cart",)
           ,BottomNavigationBarItem(icon: Icon(Icons.settings), label: "Setting",),

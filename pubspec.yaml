@@ -43,6 +43,7 @@ dependencies:
   flutter_otp_text_field: ^1.2.0
   flutter_bloc: ^8.1.6
   equatable: ^2.0.7
+  image_picker: ^1.1.2
 
 dev_dependencies:
   flutter_test:
@@ -75,6 +76,22 @@ flutter:
     - images/clothe4.jpg
     - images/clothe5.jpg
     - images/clothe6.jpg
+    - images/تنزيل.jpeg
+    - images/library.png
+    - images/clothe.jpg
+    - images/food.jpg
+    - images/elcetronic.jpg
+    - images/library1.jpg
+    - images/library2.jpg
+    - images/library3.jpg
+    - images/library4.jpg
+    - images/library5.jpg
+    - images/library6.jpg
+    - images/logo.jpg
+    - images/elec1.jpg
+    - images/elec2.jpg
+    - images/elec3.jpg
+    - images/elec4.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
