@@ -1,7 +1,11 @@
+//import 'dart:nativewrappers/_internal/vm/lib/typed_data_patch.dart';
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:untitled17/screens/store_screen.dart';
-//import 'package:untitled4/screens/store_screen.dart';
-//import '../services/register_service.dart';
+import 'package:untitled17/screens/utils.dart';
+import 'dart:typed_data';
+
+import '../cubit/Cubit_auth/Login/Login_cubit.dart';
 
 
 class RegScreen extends StatefulWidget {
@@ -19,6 +23,15 @@ class _RegScreenState extends State<RegScreen> {
   String? passowrdConfirmation;
   String? location;
   String?token;
+  Uint8List? _image;
+
+  void selectImage() async{
+    Int8List img = await  pickImage(ImageSource.gallery);
+    setState(() {
+      _image = img as Uint8List?;
+    });
+
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,6 +57,7 @@ class _RegScreenState extends State<RegScreen> {
               ),
             ),
           ),
+
           Padding(
             padding: const EdgeInsets.only(top: 200.0),
             child: Container(
@@ -169,6 +183,7 @@ class _RegScreenState extends State<RegScreen> {
                                   print('pressed');
                                  // RegService().regProduct(firstName: firstName!, lastName: lastName!, phone: phone!, passowrd: passowrd!, passowrdConfirmation: passowrdConfirmation!, location: location!, token:token!);
                                   //login(PhoneController.text, PasswordController.text);
+
                                   print('success');
 
                                 },
@@ -205,8 +220,30 @@ class _RegScreenState extends State<RegScreen> {
               ),
             ),
           ),
-          Padding(padding:const EdgeInsets.only(top: 170, left: 170) ,
-            child: Container(
+          Padding(padding:const EdgeInsets.only(top: 150, left: 150) ,
+            child: Column(
+            children: [
+            Stack(
+            children: [
+            _image !=null ?
+            CircleAvatar(
+            radius: 64,
+            backgroundImage: MemoryImage(_image! as Uint8List),
+          ):
+          const CircleAvatar(
+            radius: 54,
+            backgroundImage: AssetImage('images/تنزيل.jpeg'),
+          ),
+          Positioned(child: IconButton(onPressed: selectImage,
+              icon: Icon(Icons.add_a_photo)),
+            bottom: -10,
+            left: 60,
+          ),
+        ],
+      ),
+      ],
+    ),
+            /*Container(
               width: 70,
               height: 70,
               decoration: BoxDecoration(
@@ -216,7 +253,7 @@ class _RegScreenState extends State<RegScreen> {
                 color: Colors.black,
                 borderRadius: BorderRadius.circular(1000),
               ),
-            ),
+            ),*/
           ),
         ],
       ),

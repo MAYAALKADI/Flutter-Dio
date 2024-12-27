@@ -1,9 +1,10 @@
-class LoginState {}
+class  LoginUserState {}
 
-final class LoginInitial extends LoginState{}
-final class LoginSuccess extends LoginState{}
-final class LoginLoadin extends LoginState{}
-final class LoginFailure extends LoginState{
+final class UserInitial extends LoginUserState{}
+final class  LoginSuccess extends LoginUserState{}
+final class  LoginLoadin extends LoginUserState{}
+final class  PasswordVisibale  extends LoginUserState{}
+final class  LoginFailure extends LoginUserState{
   final String errMessage;
 
   LoginFailure({required this.errMessage});

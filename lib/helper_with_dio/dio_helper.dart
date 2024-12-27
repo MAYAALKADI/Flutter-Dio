@@ -12,18 +12,19 @@ class DioHelper {
     dio = Dio(
       BaseOptions(
         baseUrl: "http://127.0.0.1:8000/api/",
+        // connectTimeout:Duration(seconds: 30) ,
+        // receiveTimeout: Duration(seconds: 30) ,
         receiveDataWhenStatusError: true,
       ),
     );
   }
 
-
-
   static Future<Response> myPost({
     required String endPont,
     required myData,
   }) async {
-    return await dio.post('$endPont',
+    return
+        await dio.post('$endPont',
         data: myData,
         options: Options(
             headers: {
